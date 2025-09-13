@@ -1,0 +1,5 @@
+.venv
+.vs
+.env
+.cache
+TidalService
