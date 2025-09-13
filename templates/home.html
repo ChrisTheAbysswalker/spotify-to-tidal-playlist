@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>Conexión de cuentas</h1>
+
+        <div class="mt-4">
+            <p>Spotify: 
+                {% if spotify_connected %}
+                    <span class="text-success">Conectado ✅</span>
+                {% else %}
+                    <a href="/login_spotify" class="btn btn-primary">Conectar Spotify</a>
+                {% endif %}
+            </p>
+
+            <p>Tidal: 
+                {% if tidal_connected %}
+                    <span class="text-success">Conectado ✅</span>
+                {% else %}
+                    <a href="/login_tidal" class="btn btn-info">Conectar Tidal</a>
+                {% endif %}
+            </p>
+        </div>
+
+        {% if spotify_connected and tidal_connected %}
+        <a href="/playlists" class="btn btn-success btn-lg mt-3">Ir a Playlists</a>
+        {% endif %}
+    </div>
+</body>
+</html>
