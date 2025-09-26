@@ -3,6 +3,7 @@
 .env
 .cache
 .cache-spotify
-TidalService
 main.py
 __pycache__
+services
+utils
